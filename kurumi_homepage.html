@@ -1,0 +1,95 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Kurumi Home</title>
+<style>
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background: #1a1a1a url('https://i.pinimg.com/originals/32/65/6f/32656f02c34d83e10e6b448c66a978ae.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: white;
+    text-align: center;
+  }
+  .overlay {
+    background-color: rgba(0,0,0,0.6);
+    padding: 20px;
+    min-height: 100vh;
+  }
+  h1 {
+    margin-top: 30px;
+    font-size: 2.5em;
+    color: #ff4d4d;
+  }
+  #quote {
+    font-style: italic;
+    margin: 20px auto;
+    font-size: 1.2em;
+  }
+  .links {
+    margin: 30px auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+  }
+  .link {
+    background: rgba(255, 77, 77, 0.8);
+    padding: 15px 20px;
+    border-radius: 15px;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    transition: background 0.3s;
+  }
+  .link:hover {
+    background: #ff3333;
+  }
+  #clock {
+    margin-top: 30px;
+    font-size: 1.3em;
+    color: #ccc;
+  }
+</style>
+</head>
+<body>
+<div class="overlay">
+  <h1>Welcome, Tri-kun~!</h1>
+  <div id="quote">"Aku akan melindungi waktu yang penting bagimu..." – Kurumi</div>
+  <div class="links">
+    <a class="link" href="https://komikcast.me" target="_blank">Baca Manhua</a>
+    <a class="link" href="https://anoboy.click" target="_blank">Nonton Anime</a>
+    <a class="link" href="https://www.livechart.me" target="_blank">Jadwal Anime</a>
+    <a class="link" href="https://trends.google.com/trends/trendingsearches" target="_blank">Trending</a>
+    <a class="link" href="https://otakukart.com" target="_blank">Info Anime</a>
+    <a class="link" href="https://chat.openai.com/chat" target="_blank">Ngobrol Momo</a>
+    <a class="link" href="https://replit.com" target="_blank">Web Coding</a>
+    <a class="link" href="https://glitch.com" target="_blank">Ngoding Glitch</a>
+    <a class="link" href="https://tryhackme.com" target="_blank">TryHackMe</a>
+    <a class="link" href="https://jslinux.org" target="_blank">Terminal Web</a>
+  </div>
+  <div id="clock"></div>
+</div>
+<script>
+  const quotes = [
+    "Aku akan melindungi waktu yang penting bagimu... – Kurumi",
+    "Waktu adalah segalanya, bukan? – Tokisaki Kurumi",
+    "Aku tak akan membiarkan siapapun menyakitimu.",
+    "Jika kau takut gelap... aku akan menjadi cahayamu.",
+    "Senang bertemu denganmu... lagi~"
+  ];
+  document.getElementById("quote").innerText = quotes[Math.floor(Math.random() * quotes.length)];
+
+  function updateClock() {
+    const now = new Date();
+    document.getElementById("clock").innerText =
+      now.toLocaleDateString() + " " + now.toLocaleTimeString();
+  }
+  setInterval(updateClock, 1000);
+  updateClock();
+</script>
+</body>
+</html>
